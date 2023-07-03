@@ -40,7 +40,7 @@ const navigation = {
     { name: 'Menu', href: 'menu' },
     { name: 'Calendar', href: '/calendar' },
     { name: 'Menu', href: '/menu' },
-    { name: '411', href: '/contact' },
+    { name: 'Contact', href: '/contact' },
   ],
   social: [
     {
