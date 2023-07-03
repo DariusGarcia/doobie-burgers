@@ -1,3 +1,6 @@
+import ContactInfo from '@/components/contactInfo'
+import LandingCTA from '@/components/cta'
+import Testimonial from '@/components/testimonial'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -59,6 +62,9 @@ export default function Home() {
             <Image src='/burgerLogo.png' width={300} height={300} alt='logo' />
           </div>
         </div>
+        <Testimonial />
+        <LandingCTA />
+        <ContactInfo />
       </div>
     </main>
   )
