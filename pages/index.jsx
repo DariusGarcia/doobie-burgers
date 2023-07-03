@@ -15,7 +15,6 @@ export default function Home() {
             <m.div
               initial='hidden'
               animate='visible'
-              viewport={{ once: true, amount: 0.8 }}
               className='mx-auto max-w-2xl lg:mx-0 lg:flex-auto'>
               <m.div variants={cardVariants}>
                 <div className='flex w-full'>
