@@ -12,11 +12,10 @@ export default function Home() {
         {/* Header CTA */}
         <div className=' '>
           <div className='mx-auto max-w-7xl px-6 py-12 sm:py-24 lg:flex lg:items-center lg:gap-x-10 lg:px-8'>
-            <m.div
-              initial='hidden'
-              animate='visible'
-              className='mx-auto max-w-2xl lg:mx-0 lg:flex-auto'>
-              <m.div variants={cardVariants}>
+            <m.div initial='hidden' animate='visible'>
+              <m.div
+                variants={cardVariants}
+                className='mx-auto max-w-2xl lg:mx-0 lg:flex-auto'>
                 <div className='flex w-full'>
                   <div className='flex flex-col w-full'></div>
                 </div>
@@ -46,16 +45,11 @@ export default function Home() {
               </m.div>
             </m.div>
             <m.div
-              variants={cardVariantsHorizontal}
               transition={{ delay: 0.5 }}
-              initial='hidden' // Add initial and animate properties
+              initial='hidden'
               animate='visible'
-              className='mt-16 sm:mt-24 lg:mt-0
-              lg:flex-shrink-0 lg:flex-grow flex justify-center'>
-              <m.div
-                variants={cardVariantsHorizontal}
-                className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow
-              flex justify-center'>
+              className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow flex justify-center'>
+              <m.div variants={cardVariantsHorizontal}>
                 <Image
                   src='/burgerLogo.png'
                   width={300}
