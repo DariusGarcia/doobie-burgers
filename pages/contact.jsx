@@ -3,15 +3,14 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from '@heroicons/react/24/outline'
-import Image from 'next/image'
 
-export default function Example() {
+export default function ContactPage() {
   return (
     <div className='relative isolate bg-black'>
-      <div className='mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2'>
+      <div className='mx-auto flex justify-center max-w-7xl '>
         <div className='relative px-6 pb-20 pt-12 sm:pt-32 lg:static lg:px-8 lg:py-48'>
-          <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
-            <div className='absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2'>
+          <div className='mx-auto lg:mx-0 '>
+            {/* <div className='absolute inset-y-0  -z-10 w-full overflow-hidden ring-1 ring-white/5 md:w-max-w-4xl'>
               <svg
                 className='absolute inset-0 h-full w-full stroke-gray-700 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]'
                 aria-hidden='true'>
@@ -50,7 +49,7 @@ export default function Example() {
                   }}
                 />
               </div>
-            </div>
+            </div> */}
             <h2 className='text-3xl font-bold tracking-tight text-white'>
               411 - Get in touch
             </h2>
@@ -97,110 +96,8 @@ export default function Example() {
                 </dd>
               </div>
             </dl>
-            <div className='mt-12'>
-              <Image src='/mainLogo.png' width={500} height={500} />
-            </div>
           </div>
         </div>
-        <form
-          action='#'
-          method='POST'
-          className='px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48'>
-          <div className='mx-auto max-w-xl lg:mr-0 lg:max-w-lg'>
-            <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
-              <div>
-                <label
-                  htmlFor='first-name'
-                  className='block text-sm font-semibold leading-6 text-white'>
-                  First name
-                </label>
-                <div className='mt-2.5'>
-                  <input
-                    type='text'
-                    name='first-name'
-                    id='first-name'
-                    autoComplete='given-name'
-                    className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6'
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor='last-name'
-                  className='block text-sm font-semibold leading-6 text-white'>
-                  Last name
-                </label>
-                <div className='mt-2.5'>
-                  <input
-                    type='text'
-                    name='last-name'
-                    id='last-name'
-                    autoComplete='family-name'
-                    className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6'
-                  />
-                </div>
-              </div>
-              <div className='sm:col-span-2'>
-                <label
-                  htmlFor='email'
-                  className='block text-sm font-semibold leading-6 text-white'>
-                  Email
-                </label>
-                <div className='mt-2.5'>
-                  <input
-                    type='email'
-                    name='email'
-                    id='email'
-                    autoComplete='email'
-                    className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6'
-                  />
-                </div>
-              </div>
-              <div className='sm:col-span-2'>
-                <label
-                  htmlFor='phone-number'
-                  className='block text-sm font-semibold leading-6 text-white'>
-                  Phone number
-                </label>
-                <div className='mt-2.5'>
-                  <input
-                    type='tel'
-                    name='phone-number'
-                    id='phone-number'
-                    autoComplete='tel'
-                    className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6'
-                  />
-                </div>
-              </div>
-              <div className='sm:col-span-2'>
-                <label
-                  htmlFor='message'
-                  className='block text-sm font-semibold leading-6 text-white'>
-                  Message
-                </label>
-                <div className='mt-2.5'>
-                  <textarea
-                    name='message'
-                    id='message'
-                    rows={4}
-                    className='block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6'
-                    defaultValue={''}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className='mt-8 flex justify-end'>
-              <button
-                type='submit'
-                className='rounded-md bg-green-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500'>
-                Send message
-              </button>
-            </div>
-            <div className='flex justify-center mt-12'>
-              <Image src='/LALogo.png' width={400} height={400} />
-            </div>
-          </div>
-        </form>
       </div>
     </div>
   )
