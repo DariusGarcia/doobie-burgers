@@ -38,7 +38,7 @@ export default function Home() {
             <p className='mt-6 text-lg leading-8 text-gray-500'>
               Burgers are unique and always have a story to tell. Come along
               with as we tour Los Angeles letting the World see our story come
-              into pictue. Come taste the love at Doobie Burgers.
+              into pictue.
             </p>
             <div className='mt-10 '>
               <div className='flex  items-center gap-x-6'>
