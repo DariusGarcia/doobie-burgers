@@ -39,7 +39,9 @@ export default function Testimonial() {
               </blockquote>
               <figcaption className='mt-8 text-base'>
                 <div className='font-semibold text-white'>Chef Pablo</div>
-                <div className='mt-1 text-gray-400'>CEO of Doobie Burgers</div>
+                <div className='mt-1 text-gray-400'>
+                  Owner of Doobie Burgers
+                </div>
               </figcaption>
             </figure>
           </div>
