@@ -33,7 +33,7 @@ export default function Navbar() {
                 <div className='hidden sm:ml-6 sm:block'>
                   <div className='flex space-x-4'>
                     <Image
-                      src='/doobieLogo2.png'
+                      src='/mainLogo.png'
                       width={50}
                       height={50}
                       alt='logo'

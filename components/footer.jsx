@@ -29,7 +29,7 @@ export default function Footer() {
           ))}
         </div>
         <div className='flex justify-center mt-12'>
-          <Image src='/doobieLogo2.png' width={200} height={200} />
+          <Image src='/mainLogo.png' width={200} height={200} />
         </div>
         <p className='mt-10 text-center text-xs leading-5 text-gray-500'>
           &copy; 2023 Doobie Burgers, Inc. All rights reserved.

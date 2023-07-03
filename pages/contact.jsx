@@ -98,7 +98,7 @@ export default function Example() {
               </div>
             </dl>
             <div className='mt-12'>
-              <Image src='/doobieLogo2.png' width={500} height={500} />
+              <Image src='/mainLogo.png' width={500} height={500} />
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function Example() {
               </button>
             </div>
             <div className='flex justify-center mt-12'>
-              <Image src='/doobieLogo1.png' width={400} height={400} />
+              <Image src='/LALogo.png' width={400} height={400} />
             </div>
           </div>
         </form>

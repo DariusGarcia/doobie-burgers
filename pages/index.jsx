@@ -12,7 +12,7 @@ export default function Home() {
               <div className='flex flex-col w-full'>
                 <div className=' lg:mt-0 mb-6 lg:flex-shrink-0 lg:flex-grow flex justify-center md:flex-none md:justify-start'>
                   <Image
-                    src='/doobieLogo2.png'
+                    src='/mainLogo.png'
                     width={300}
                     height={300}
                     alt='logo'
@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <div className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow flex justify-center'>
-            <Image src='/doobieLogo3.png' width={300} height={300} alt='logo' />
+            <Image src='/burgerLogo.png' width={300} height={300} alt='logo' />
           </div>
         </div>
       </div>

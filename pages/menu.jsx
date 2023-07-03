@@ -83,7 +83,7 @@ const Menu = () => {
         </section>
         {/* image */}
         <div className='mt-8'>
-          <Image src='/doobieLogo3.png' width={400} height={400} alt='logo' />
+          <Image src='/burgerLogo.png' width={400} height={400} alt='logo' />
         </div>
       </div>
     </div>
