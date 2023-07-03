@@ -32,7 +32,8 @@ export default function Footer() {
           <Image src='/mainLogo.png' width={200} height={200} />
         </div>
         <p className='mt-10 text-center text-xs leading-5 text-gray-500'>
-          &copy; 2023 Doobie Burgers, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Doobie Burgers, Inc. All rights
+          reserved.
         </p>
       </div>
     </footer>
@@ -41,7 +42,7 @@ export default function Footer() {
 
 const navigation = {
   main: [
-    { name: 'About', href: '#=/' },
+    { name: 'About', href: '/' },
     { name: 'Menu', href: 'menu' },
     { name: 'Calendar', href: '/calendar' },
     { name: 'Menu', href: '/menu' },

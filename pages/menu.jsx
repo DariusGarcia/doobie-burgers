@@ -40,16 +40,19 @@ const Menu = () => {
                         {item?.sauce && (
                           <p className='  leading-9 text-md'>{item.sauce}</p>
                         )}
-                        <ul className='flex flex-col md:flex-row gap-x-6'>
-                          {item?.options?.map((option, idx) => (
-                            <li
-                              className='flex justify-between gap-2'
-                              key={idx}>
-                              <span>{option.name}</span>
-                              <span>{option.price}</span>
-                            </li>
-                          ))}
-                        </ul>
+
+                        {item?.options && (
+                          <ul className='flex flex-col md:flex-row gap-x-6'>
+                            {item?.options?.map((option, idx) => (
+                              <li
+                                className='flex justify-between gap-2'
+                                key={idx}>
+                                <span>{option.name}</span>
+                                <span>{option.price}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     )}
                     <div className='flex w-full pr-8 '>
