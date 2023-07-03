@@ -1,95 +1,141 @@
 import Image from 'next/image'
-import React from 'react'
+import { motion as m, AnimatePresence } from 'framer-motion'
 
 const Menu = () => {
   return (
-    <div className='flex flex-col w-full justify-center items-center mt-12 px-4  '>
-      <div className='flex flex-col w-full md:max-w-7xl justify-center items-center'>
-        <h1 className='text-4xl mb-4'>Menu</h1>
-        <section className='flex flex-col gap-8 mt-4'>
-          <h2 className='text-3xl text-center'>Burgers</h2>
-          {menuItems.map((item) => (
-            <>
-              <article
-                key={item.id}
-                className='flex flex-col gap-8 justify-center items-center p-4 py-6 rounded-md bg-[#e1dfdb] bg-opacity-10'>
-                <div className='flex flex-col md:flex-row justify-between w-full gap-8'>
-                  <div className='flex flex-col w-full md:pr-12 gap-4'>
-                    <div className='flex flex-row items-center gap-2 '>
-                      <h2 className='text-xl'>{item.name}</h2>
-                      {item.isMeatlessAvailable && (
-                        <p className='text-sm'>(available meatless)</p>
-                      )}
-                    </div>
-                    {item.name !== 'Paraphernalia' && (
-                      <div className='flex flex-col gap-6'>
-                        <p className=' leading-9 text-md text-gray-300'>
-                          {item.description}
-                        </p>
-                        {item?.cheeseOptions && (
-                          <ul className='flex flex-col md:flex-row gap-x-6'>
-                            {item?.cheeseOptions?.map((cheese, idx) => (
-                              <li
-                                key={idx}
-                                className='flex justify-between gap-2'>
-                                {cheese}
-                              </li>
-                            ))}
-                          </ul>
+    <AnimatePresence>
+      <div className='flex flex-col w-full justify-center items-center py-24 md:py-36 px-4 relative  '>
+        <div className='flex flex-col w-full md:max-w-7xl justify-center items-center'>
+          <section className='flex flex-col gap-8 mt-4'>
+            <m.div
+              initial='hidden'
+              animate='visible'
+              viewport={{ once: true, amount: 0.8 }}>
+              <m.h1 variants={cardVariants} className='text-3xl text-center'>
+                Burgers
+              </m.h1>
+            </m.div>
+            {menuItems.map((item) => (
+              <>
+                <article
+                  key={item.id}
+                  className='flex flex-col gap-8 justify-center items-center p-4 py-6 rounded-md'>
+                  <div className='flex flex-col md:flex-row justify-between w-full gap-8'>
+                    <div className='flex flex-col w-full md:pr-12 gap-4'>
+                      <div className='flex flex-row items-center gap-2 '>
+                        <h2 className='text-xl'>{item.name}</h2>
+                        {item.isMeatlessAvailable && (
+                          <p className='text-sm'>(available meatless)</p>
                         )}
-                        {item?.sauce && (
-                          <p className='  leading-9 text-md'>{item.sauce}</p>
-                        )}
+                      </div>
+                      {item.name !== 'Paraphernalia' && (
+                        <div className='flex flex-col gap-6'>
+                          <p className=' leading-9 text-md text-gray-300'>
+                            {item.description}
+                          </p>
+                          {item?.cheeseOptions && (
+                            <ul className='flex flex-col md:flex-row gap-x-6'>
+                              {item?.cheeseOptions?.map((cheese, idx) => (
+                                <li
+                                  key={idx}
+                                  className='flex justify-between gap-2'>
+                                  {cheese}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                          {item?.sauce && (
+                            <p className='  leading-9 text-md'>{item.sauce}</p>
+                          )}
 
-                        {item?.options && (
-                          <ul className='flex flex-col md:flex-row gap-x-6'>
-                            {item?.options?.map((option, idx) => (
-                              <li
-                                className='flex justify-between gap-2'
-                                key={idx}>
-                                <span>{option.name}</span>
-                                <span>{option.price}</span>
+                          {item?.options && (
+                            <ul className='flex flex-col md:flex-row gap-x-6'>
+                              {item?.options?.map((option, idx) => (
+                                <li
+                                  className='flex justify-between gap-2'
+                                  key={idx}>
+                                  <span>{option.name}</span>
+                                  <span>{option.price}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      )}
+                      <div className='flex w-full pr-8 '>
+                        {item.items && (
+                          <ul
+                            key={item.id + 'items'}
+                            className='w-full justify-start flex flex-col gap-8 gap-x-6'>
+                            {item?.items?.map((item) => (
+                              <li className='flex justify-between gap-2'>
+                                <span>{item.name}</span>
+                                <span>{item.price}</span>
                               </li>
                             ))}
                           </ul>
                         )}
                       </div>
-                    )}
-                    <div className='flex w-full pr-8 '>
-                      {item.items && (
-                        <ul
-                          key={item.id + 'items'}
-                          className='w-full justify-start flex flex-col gap-8 gap-x-6'>
-                          {item?.items?.map((item) => (
-                            <li className='flex justify-between gap-2'>
-                              <span>{item.name}</span>
-                              <span>{item.price}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                    </div>
+                    <div className='w-56 h-56'>
+                      <Image
+                        src='/burger.png'
+                        className='rounded-md'
+                        width={400}
+                        height={400}
+                        alt='burger'
+                      />
                     </div>
                   </div>
-                  <div className='w-56 h-56'>
-                    <Image
-                      src='/burger.png'
-                      className='rounded-md'
-                      width={400}
-                      height={400}
-                      alt='burger'
-                    />
+                </article>
+              </>
+            ))}
+
+            <h2 className='text-center text-3xl mt-12'>Paraphernalia</h2>
+            {paraphernalia.map((item, idx) => (
+              <>
+                <article
+                  key={idx}
+                  className='flex flex-col gap-8 justify-center items-center p-4 py-6 rounded-md'>
+                  <div className='flex flex-col md:flex-row justify-between w-full gap-8'>
+                    <div className='flex flex-col w-full gap-4'>
+                      <div className='flex flex-row items-center gap-2 '>
+                        <h2 className='text-xl'>{item.name}</h2>
+                      </div>
+                      <div className='flex w-full'>
+                        {item.items && (
+                          <ul
+                            key={item.id + 'items'}
+                            className='w-full justify-start flex flex-col gap-8 gap-x-6'>
+                            {item?.items?.map((item) => (
+                              <div className='flex flex-row justify-between items-center'>
+                                <li className='flex justify-between gap-12 text-xl'>
+                                  <span>{item.name}</span>
+                                  <span>{item.price}</span>
+                                </li>
+                                <div className='flex '>
+                                  <Image
+                                    src='/burger.png'
+                                    className='rounded-md'
+                                    width={200}
+                                    height={200}
+                                    alt='burger'
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </>
-          ))}
-        </section>
-        {/* image */}
-        <div className='mt-8'>
-          <Image src='/burgerLogo.png' width={400} height={400} alt='logo' />
+                </article>
+              </>
+            ))}
+          </section>
         </div>
       </div>
-    </div>
+    </AnimatePresence>
   )
 }
 
@@ -146,9 +192,10 @@ const menuItems = [
     ],
     isMeatlessAvailable: true,
   },
+]
+
+const paraphernalia = [
   {
-    id: 5,
-    name: 'Paraphernalia',
     items: [
       { name: 'Crinkle Fries (cooked in Corn Oil)', price: '$6' },
       {
@@ -164,3 +211,19 @@ const menuItems = [
     ],
   },
 ]
+
+const cardVariants = {
+  hidden: {
+    y: 200,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+}

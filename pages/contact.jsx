@@ -6,7 +6,7 @@ import {
 
 export default function ContactPage() {
   return (
-    <div className='relative isolate bg-black'>
+    <div className='relative isolate bg-black pt-24'>
       <div className='mx-auto flex justify-center max-w-7xl '>
         <div className='relative px-6 pb-20 pt-12 sm:pt-32 lg:static lg:px-8 lg:py-48'>
           <div className='mx-auto lg:mx-0 '>

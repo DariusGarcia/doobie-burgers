@@ -7,7 +7,7 @@ export default function LandingCTA() {
             Come taste the love at Doobie Burgers.
             <br />
           </h2>
-          <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600'>
+          <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-500'>
             You’ve either had one or seen one.
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
