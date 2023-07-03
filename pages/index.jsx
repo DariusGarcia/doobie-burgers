@@ -47,9 +47,11 @@ export default function Home() {
             </m.div>
             <m.div
               variants={cardVariantsHorizontal}
+              transition={{ delay: 0.5 }}
               initial='hidden' // Add initial and animate properties
               animate='visible'
-              className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow flex justify-center'>
+              className='mt-16 sm:mt-24 lg:mt-0
+              lg:flex-shrink-0 lg:flex-grow flex justify-center'>
               <m.div
                 variants={cardVariantsHorizontal}
                 className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow
