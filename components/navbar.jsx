@@ -32,7 +32,12 @@ export default function Navbar() {
               <div className='flex flex-1 items-center justify-center sm:items-stretch'>
                 <div className='hidden sm:ml-6 sm:block'>
                   <div className='flex space-x-4'>
-                    <Image src='/doobieLogo2.png' width={50} height={50} />
+                    <Image
+                      src='/doobieLogo2.png'
+                      width={50}
+                      height={50}
+                      alt='logo'
+                    />
                     {navigation.map((item) => (
                       <a
                         key={item.name}

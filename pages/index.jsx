@@ -11,7 +11,12 @@ export default function Home() {
             <div className='flex '>
               <div className='flex flex-col w-full'>
                 <div className=' lg:mt-0 mb-6 lg:flex-shrink-0 lg:flex-grow flex justify-center md:flex-none md:justify-start'>
-                  <Image src='/doobieLogo2.png' width={300} height={300} />
+                  <Image
+                    src='/doobieLogo2.png'
+                    width={300}
+                    height={300}
+                    alt='logo'
+                  />
                 </div>
                 <div className='relative flex items-center justify-start gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
                   <span className='font-semibold text-green-700 w-full'>
@@ -51,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <div className='mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow flex justify-center'>
-            <Image src='/doobieLogo3.png' width={300} height={300} />
+            <Image src='/doobieLogo3.png' width={300} height={300} alt='logo' />
           </div>
         </div>
       </div>

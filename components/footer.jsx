@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <footer className='border-gray-600 border-t-[1px] mt-24'>
@@ -25,6 +27,9 @@ export default function Footer() {
               <item.icon className='h-6 w-6' aria-hidden='true' />
             </a>
           ))}
+        </div>
+        <div className='flex justify-center mt-12'>
+          <Image src='/doobieLogo2.png' width={200} height={200} />
         </div>
         <p className='mt-10 text-center text-xs leading-5 text-gray-500'>
           &copy; 2023 Doobie Burgers, Inc. All rights reserved.
