@@ -7,10 +7,10 @@ import { motion as m, AnimatePresence } from 'framer-motion'
 
 export default function Home() {
   return (
-    <main className='pt-12'>
+    <main className='max-w-[100vw] pt-12'>
       <AnimatePresence>
         {/* Header CTA */}
-        <div className=' '>
+        <div className='w-full'>
           <div className='mx-auto max-w-7xl px-6 py-12 sm:py-24 lg:flex lg:items-center lg:gap-x-10 lg:px-8'>
             <m.div initial='hidden' animate='visible'>
               <m.div
@@ -85,7 +85,7 @@ const cardVariants = {
 }
 const cardVariantsHorizontal = {
   hidden: {
-    x: 200,
+    x: -200,
     opacity: 0,
   },
   visible: {
